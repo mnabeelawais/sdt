@@ -37,178 +37,100 @@ namespace WindowsFormsApplication3
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "7";
-            }
-            else {
-                textBox1.Text = textBox1.Text + "7";
-        }
+            currentExpression += "7"; 
+            textBox1.Text = currentExpression;
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "8";
-            }
-            else {
-                textBox1.Text = textBox1.Text + "8";
-        }
+            currentExpression += "8"; 
+            textBox1.Text = currentExpression;
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "9";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "9";
-            }
+            currentExpression += "9"; 
+            textBox1.Text = currentExpression;
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "4";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "4";
-            }
+            currentExpression += "4"; 
+            textBox1.Text = currentExpression;
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "5";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "5";
-            }
+            currentExpression += "5"; 
+            textBox1.Text = currentExpression;
         }
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "6";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "6";
-            }
+            currentExpression += "6"; 
+            textBox1.Text = currentExpression;
         }
-
+        
+        private string currentExpression = "";
+        
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "1";
-            }
-            else {
-                textBox1.Text = textBox1.Text + "1";
-            }
+            currentExpression += "1";
+            textBox1.Text = currentExpression;
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "2";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "2";
-
-            }
+            currentExpression += "2"; 
+            textBox1.Text = currentExpression;
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "3";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "3";
-            }
+            currentExpression += "3"; 
+            textBox1.Text = currentExpression;
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
-            {
-                textBox1.Text = "0";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + "0";
-            }
+            currentExpression += "0"; 
+            textBox1.Text = currentExpression;
         }
 
-        double firstNumber;
-        String operation;
+       
         private void btn_plus_Click(object sender, EventArgs e)
         {
-            firstNumber = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "+";
+            currentExpression += " + ";
+            textBox1.Text = currentExpression;
 
         }
-        double secondNumber;
-        double result;
+        
         private void btn_equal_Click(object sender, EventArgs e)
         {
-            secondNumber = Convert.ToDouble(textBox1.Text);
-
-            if (double.TryParse(textBox1.Text, out secondNumber))
+            try
             {
+               string expressionToEvaluate = currentExpression.Replace(" x ", " * ");
 
-                if (operation == "+")
+                if (expressionToEvaluate.Contains("/ 0"))
                 {
-                    result = firstNumber + secondNumber;
-                    textBox1.Text = Convert.ToString(result);
-                    firstNumber = result;
+                     MessageBox.Show("Division by zero is not allowed.");
+                        currentExpression = "";
+                        textBox1.Text = "";
+                        return; 
                 }
 
-                if (operation == "-")
-                {
-                    result = firstNumber - secondNumber;
-                    textBox1.Text = Convert.ToString(result);
-                    firstNumber = result;
-                }
+        
+                var result = new DataTable().Compute(expressionToEvaluate, null);
 
-                if (operation == "x")
-                {
-                    result = firstNumber * secondNumber;
-                    textBox1.Text = Convert.ToString(result);
-                    firstNumber = result;
-                }
+                textBox1.Text = result.ToString();
 
-                if (operation == "/")
-                {
-                    if (secondNumber != 0)
-                    {
-                        result = firstNumber / secondNumber;
-                        textBox1.Text = Convert.ToString(result);
-                        firstNumber = result;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Division by zero is not allowed.");
-                    }
-                }
+                currentExpression = result.ToString();
             }
 
-            else 
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");    
+        catch (Exception ex)
+         {
+            MessageBox.Show("Invalid expression. Please check your input.");
+            currentExpression = "";
+            textBox1.Text = "";
             }
 
 
@@ -216,28 +138,26 @@ namespace WindowsFormsApplication3
 
         private void btn_sub_Click(object sender, EventArgs e)
         {
-            firstNumber = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "-";
+            currentExpression += " - ";
+            textBox1.Text = currentExpression;
         }
 
         private void btn_multi_Click(object sender, EventArgs e)
         {
-            firstNumber = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "x";
+            currentExpression += " * ";
+            textBox1.Text = currentExpression;
         }
 
         private void btn_div_Click(object sender, EventArgs e)
         {
-            firstNumber = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "/";
+            currentExpression += " / "; 
+            textBox1.Text = currentExpression;
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            currentExpression = ""; 
+            textBox1.Text = ""; 
         }
 
         private void btn_dot_Click(object sender, EventArgs e)
