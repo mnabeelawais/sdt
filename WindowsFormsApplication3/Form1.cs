@@ -144,7 +144,7 @@ namespace WindowsFormsApplication3
 
         private void btn_multi_Click(object sender, EventArgs e)
         {
-            currentExpression += " * ";
+            currentExpression += " x ";
             textBox1.Text = currentExpression;
         }
 
