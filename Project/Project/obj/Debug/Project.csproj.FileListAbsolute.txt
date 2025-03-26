@@ -1,0 +1,10 @@
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\bin\Debug\Project.exe.config
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\bin\Debug\Project.exe
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\bin\Debug\Project.pdb
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\obj\Debug\Project.Form1.resources
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\obj\Debug\Project.Properties.Resources.resources
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\obj\Debug\Project.csproj.GenerateResource.Cache
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\obj\Debug\Project.exe
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\obj\Debug\Project.pdb
+c:\users\hp\documents\visual studio 2012\Projects\Project\Project\obj\Debug\Project.crud.resources
