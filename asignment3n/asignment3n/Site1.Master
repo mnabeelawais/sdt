@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="asignment3n.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        .header {
+            background-color: #1E88E5;
+            color: white;
+            display: flexbox;
+            flex-align: center;
+            text-justify:distribute;
+            padding: 15px 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            display: flexbox;
+           flex-align: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .nav {
+            display: flexbox;
+            padding: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 6px 10px;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #1565C0;
+        }
+
+        .content {
+            padding: 30px;
+            min-height: 80vh;
+        }
+
+        .footer {
+            position:fixed;
+            bottom:0;
+            width:100%;
+            background-color: #1E88E5;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Logo" />
+                <div class="company-name">My Company</div>
+            </div>
+            <div class="nav">
+                <a href="Home.aspx">Home</a>
+                <a href="Services.aspx">Services</a>
+                <a href="Contact.aspx">Contact</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="footer">
+            © 2025 My Company. All rights reserved.
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+D:\University file\c#\asignment3n\asignment3n\bin\asignment3n.dll
+D:\University file\c#\asignment3n\asignment3n\bin\asignment3n.pdb
+D:\University file\c#\asignment3n\asignment3n\obj\Debug\asignment3n.csprojResolveAssemblyReference.cache
+D:\University file\c#\asignment3n\asignment3n\obj\Debug\asignment3n.dll
+D:\University file\c#\asignment3n\asignment3n\obj\Debug\asignment3n.pdb
+C:\Users\HP\Documents\Visual Studio 2012\Projects\asignment3n\asignment3n\bin\asignment3n.dll
+C:\Users\HP\Documents\Visual Studio 2012\Projects\asignment3n\asignment3n\bin\asignment3n.pdb
+C:\Users\HP\Documents\Visual Studio 2012\Projects\asignment3n\asignment3n\obj\Debug\asignment3n.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\Visual Studio 2012\Projects\asignment3n\asignment3n\obj\Debug\asignment3n.dll
+C:\Users\HP\Documents\Visual Studio 2012\Projects\asignment3n\asignment3n\obj\Debug\asignment3n.pdb
