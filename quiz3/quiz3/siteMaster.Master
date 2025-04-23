@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="siteMaster.Master.cs" Inherits="quiz3.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <title>School</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header> 
+            <a href ="Home.aspx">Home</a>
+            <a href="Department.aspx">Departments</a>
+            <a href="#">Faculty</a>
+            <a href="#">Contact us</a>
+            
+        </header>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+        <footer>@School of bussiness</footer>
+    </form>
+</body>
+</html>
