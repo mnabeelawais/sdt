@@ -1,0 +1,5 @@
+C:\Users\HP\documents\visual studio 2012\Projects\AMS Project\AMS Project\bin\AMS Project.dll
+C:\Users\HP\documents\visual studio 2012\Projects\AMS Project\AMS Project\bin\AMS Project.pdb
+C:\Users\HP\documents\visual studio 2012\Projects\AMS Project\AMS Project\obj\Debug\AMS Project.csprojResolveAssemblyReference.cache
+C:\Users\HP\documents\visual studio 2012\Projects\AMS Project\AMS Project\obj\Debug\AMS Project.dll
+C:\Users\HP\documents\visual studio 2012\Projects\AMS Project\AMS Project\obj\Debug\AMS Project.pdb

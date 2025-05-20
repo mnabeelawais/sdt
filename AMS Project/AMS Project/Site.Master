@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="SiteMaster" Codebehind="Site.master.cs" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Attendance Management System</title>
+    <link href="~/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header">
+                <h1>Attendance Management System</h1>
+                <div class="user-info">
+                    <asp:Label ID="lblUserInfo" runat="server" Text=""></asp:Label>
+                    <asp:LinkButton ID="lnkLogout" runat="server" Text="Logout" OnClick="lnkLogout_Click" 
+                        CssClass="logout-link" Visible="false"></asp:LinkButton>
+                </div>
+            </div>
+            
+            <div class="nav-menu">
+                <ul>
+                    <li><asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Default.aspx">Dashboard</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkStudents" runat="server" NavigateUrl="~/ManageStudents.aspx">Manage Students</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkAttendance" runat="server" NavigateUrl="~/MarkAttendance.aspx">Mark Attendance</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkReports" runat="server" NavigateUrl="~/Reports.aspx">Reports</asp:HyperLink></li>
+                </ul>
+            </div>
+            
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            
+            <div class="footer">
+                <p>&copy; <%: DateTime.Now.Year %> - Attendance Management System</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
